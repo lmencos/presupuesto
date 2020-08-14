@@ -1,7 +1,16 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useState} from 'react';
 
 
 const Pregunta = () => {
+
+  //useState para la cantidad presupuestada
+  const [ cantidad, guardarCantidad ] = useState(0);
+
+  //Función que lee el presupuesto 
+  const definirPresupuesto = (e) => {
+    guardarCantidad(parseInt(e.target.value), 10);
+  }
+
   return ( 
     <Fragment>
       <h4>Captura tu presupuesto semanal</h4>
@@ -12,6 +21,7 @@ const Pregunta = () => {
           type="number"
           className="u-full-width"
           placeholder="Captura tu presupuesto"
+          onChange={definirPresupuesto}
 
         />
         <input 
