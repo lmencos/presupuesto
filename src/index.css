@@ -3,8 +3,8 @@
 }
 body {
   background: #000428;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #004e92, #000428);  
-  background: linear-gradient(to right, #004e92, #000428); 
+  background: -webkit-linear-gradient(to right, #0165bd, #000428);  
+  background: linear-gradient(to right, #006cca, #000428); 
   margin: 0;
   padding: 0;
   font-family: sans-serif;
@@ -13,12 +13,12 @@ header {
   margin: 12px 0;
 }
 .contenido {
-  padding:20px;
+  padding:12px;
 }
 .contenido-principal {
-  background-color: white;
-  padding: 30px;
-  border-radius: 20px;
+  background-color: rgb(250, 243, 243);
+  padding: 12px;
+  border-radius: 3px;
 }
 .presupuesto p{
   margin-bottom: 0;
@@ -30,19 +30,19 @@ header {
 #gastos {
   margin-bottom: 30px;
 }
-h1 {
+h1, h2, h3 {
   font-family: 'Raleway', sans-serif;
   font-weight: 100;
   color: white;
   text-align: center;
-  font-size: 4.8rem!important;
+  font-size: 2.1rem!important;
 }
-h2, h3, h4 {
+h4, h5 {
   font-family: 'Raleway', sans-serif;
   font-weight: 100;
   color:#86a5c0;
   margin-bottom:30px;
-  font-size:3rem!important;
+  font-size:1.8rem!important;
   text-align: center;
 }
 .campo {
@@ -59,7 +59,7 @@ h2, h3, h4 {
   border-radius: .25rem;
 }
 .alert-primary {
-  color: #004085;
+  color: #053a74;
   background-color: #cce5ff;
   border-color: #b8daff;
 }
