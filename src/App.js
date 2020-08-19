@@ -7,24 +7,33 @@ function App() {
   //Definir presupuesto
   const [ presupuesto, guardarPresupuesto ] = useState(0);
   const [ restante, guardarRestante ] = useState(0);
+  const [ mostrarPregunta, actualizarPregunta ] = useState(true);
 
   return (
     <div className="container" >
       <header>
         <h3>Gasto semanal</h3>
         <div className="contenido-principal contenido" >
-          <Pregunta 
+
+          { mostrarPregunta ? 
+          (          
+            <Pregunta 
             guardarPresupuesto={guardarPresupuesto}
             guardarRestante={guardarRestante}
-          />
-          <div className="row" >
+            actualizarPregunta={actualizarPregunta}
+            />
+          )  :  
+          (
+            <div className="row" >
             <div className="one-half column" >
               <Formulario />
             </div>
             <div className="one-half column" >
               2
             </div>
-          </div>
+            </div>
+          )  }
+
         </div>
       </header>
     </div>
