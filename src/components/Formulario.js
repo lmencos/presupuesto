@@ -5,7 +5,7 @@ import shortid from 'shortid';
 const Formulario = ( {agregarNuevoGasto} ) => {
 
   const [ concepto, guardarConcepto ] = useState('');
-  const [ cantidad, guardarCantidad ] = useState(0);
+  const [ cantidad, guardarCantidad ] = useState('');
   const [ error, guardarError ] = useState(false);
 
   //Cuando el usuario agregue un gasto "botón agregar gasto"
@@ -33,7 +33,7 @@ const Formulario = ( {agregarNuevoGasto} ) => {
 
     // Resetear el formulario
     guardarConcepto('');
-    guardarCantidad(0);
+    guardarCantidad('');
   }
 
   return (  
