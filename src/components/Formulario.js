@@ -1,15 +1,24 @@
 import React, { useState } from 'react';
+import Error from './Error';
 
 const Formulario = () => {
 
   const [ concepto, guardarConcepto ] = useState('');
   const [ cantidad, guardarCantidad ] = useState(0);
+  const [ error, guardarError ] = useState(false);
 
   //Cuando el usuario agregue un gasto "botón agregar gasto"
   const agregarGasto = (e) => {
     e.preventDefault();
 
     // Validar captura
+    if(cantidad < 1 || isNaN( cantidad ) || concepto.trim() === '') {
+      guardarError(true);
+      return;
+    }
+
+    // resetear el mensaje de error en <Error />
+    guardarError(false);
 
     // Construir el gasto
 
@@ -23,6 +32,12 @@ const Formulario = () => {
       onSubmit={agregarGasto}
     >
       <h2 className="titulo1">Agrega tus gastos aquí:</h2>
+
+      { error ?   <Error 
+                    mensaje="Favor de llenar ambos campos y/o capturar una
+                    cantidad presupuestable"
+                  /> :   null }
+
       <div className="campo" >
         <label htmlFor="">Nombre del gasto</label>
           <input 
