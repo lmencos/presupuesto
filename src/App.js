@@ -33,7 +33,6 @@ function App() {
   }, [gasto, gastos, crearGasto, restante] )
 
 
-
   return (
     <div className="container" >
       <header>
