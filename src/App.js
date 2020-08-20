@@ -5,6 +5,7 @@ import Listado from './components/Listado';
 import ControlPresupuesto from './components/ControlPresupuesto';
 
 function App() {
+  const year = new Date().getFullYear();
 
   //Definir presupuesto
   const [ presupuesto, guardarPresupuesto ] = useState(0);
@@ -68,6 +69,11 @@ function App() {
           )  }
 
         </div>
+        <footer className="footer">
+          <p>Todos los derechos reservados, Luis Mencos Guzmán {year} &copy;
+                  v1.2
+          </p>
+        </footer>
       </header>
     </div>
   );

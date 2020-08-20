@@ -105,3 +105,9 @@ h4, h5 {
 .titulo1{
   color: rgb(43, 55, 226);
 }
+
+.footer{
+  color: white;
+  display: flex;
+  justify-content: center;
+}
